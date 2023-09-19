@@ -1,0 +1,43 @@
+.btn {
+    display: inline-block;
+    border: 0;
+    background-color: white;
+    color: @primary-color;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 70px;
+    border-radius: 25px;
+    transition: all @transition-fast-ease;
+
+    @media @query-min-smallDevice {
+        padding: 15px 50px;
+    }
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: @btn-shadow;
+    }
+
+    &--primary:extend(.btn all) {
+        background-color: @primary-color;
+        color: white;
+    }
+
+    &--cta {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &--more:extend(.btn all) {
+        background-color: @primary-color;
+        color: white;
+        padding: 8px 50px;
+
+        @media @query-min-largeDevice {
+            padding: 8px 40px;
+        }
+    }
+}

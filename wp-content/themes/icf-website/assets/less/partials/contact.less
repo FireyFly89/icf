@@ -1,0 +1,120 @@
+.contact {
+    position: relative;
+    padding-bottom: 40px;
+
+    &--dark:extend(.contact all) {
+        background-color: @dark-color;
+        color: white;
+
+        .contact__overlay {
+            @media @query-min-smallDevice {
+                display: block;
+            }
+        }
+
+        input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+            .formInput(@bgColor: @dark-color-alt;@color: white);
+        }
+
+        textarea {
+            .formTextarea(@bgColor: @dark-color-alt;@color: white);
+        }
+
+        .styled__select {
+            .formSelect(@bgColor: @dark-color-alt;@color: white);
+        }
+
+        .styled__checkbox {
+            .formCheckbox(@bgColor: @dark-color-alt;);
+        }
+
+        div.wpcf7-response-output,
+        div.wpcf7-validation-errors,
+        div.wpcf7-acceptance-missing {
+            color: white;
+        }
+    }
+
+    &--light:extend(.contact all) {
+        background-color: @primary-color-light;
+
+        input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+            .formInput(@bgColor: white;@color: black);
+        }
+
+        .styled__select {
+            .formSelect(@bgColor: white;@color: black);
+        }
+
+        textarea {
+            .formTextarea(@bgColor: white;@color: black);
+        }
+
+        .styled__checkbox {
+            .formCheckbox(@bgColor: white;);
+        }
+
+        div.wpcf7-response-output,
+        div.wpcf7-validation-errors,
+        div.wpcf7-acceptance-missing {
+            color: black;
+        }
+    }
+
+    &__wrap {
+        .wrapper();
+    }
+
+    &__overlay {
+        position: absolute;
+        display: none;
+        top: 50px;
+        right: -50px;
+        width: 50%;
+        height: 80%;
+
+        @media @query-min-largeDevice {
+            right: -100px;
+        }
+
+        @media @query-min-hdReady {
+            right: -230px;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .section__header {
+        padding-bottom: 10px;
+    }
+
+    .section__title {
+        line-height: 1.3;
+    }
+
+    &__form {
+        @media @query-min-largeDevice {
+            max-width: 40%;
+        }
+
+        @media @query-min-smallDevice {
+            max-width: 50%;
+        }
+
+        input[type="submit"] {
+            .formSubmit();
+            margin-top: 10px;
+        }
+
+        br {
+            display: none;
+        }
+
+        &__extra p {
+            font-size: 12px;
+        }
+    }
+}

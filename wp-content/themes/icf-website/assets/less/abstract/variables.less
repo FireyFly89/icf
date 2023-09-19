@@ -1,0 +1,58 @@
+// variable structure to follow: @{element-name}-{type}-{modifier}: value(s);
+// Paths (relative to style.css)
+@path-fonts: "./assets/fonts/";
+@path-images: "./assets/images";
+
+// Colours
+@primary-color: #4097ff;
+@primary-color-dark: #3477c8;
+@primary-color-light: #ecf5fc;
+@dark-color: #101a28;
+@dark-color-alt: #0a111c;
+@gray-color: #9b9b9b;
+@white-color: #f4f5f7;
+
+// Sizes
+@wrapper-width: 1140px;
+@wrapper-article-width: 756px;
+@blockquote-width: 992px;
+@list-img-height: 245px;
+
+// Font families
+@primary-font: 'Ubuntu', sans-serif;
+
+// Shadows
+@default-shadow: 0px 15px 15px 5px rgba(64, 150, 255, .15);
+@btn-shadow: 0 3px 8px rgba(64, 150, 255, .25);
+
+// Single Article / Page
+
+
+// Animation timings
+@transition-fast-ease: 300ms ease;
+@transition-medium-ease: 500ms ease;
+@transition-slow-ease: 800ms ease;
+@transition-lazy-ease: 1400ms ease;
+
+// Media query sizes
+@hd-device-res: 1600px; // desktop 3
+@hdReady-device-res: 1366px; // desktop 2
+@large-device-res: 1200px; // desktop 1
+@medium-device-res: 992px; // tablet
+@small-device-res: 768px; // mobile 1
+@extraSmall-device-res: 480px; // mobile 2
+@old-device-res: 375px; // mobile 3 (iphone 6, etc)
+
+// Media query shorthands (mobile first only)
+@query-min-hd: ~"(min-width: @{hd-device-res})";
+@query-min-hdReady: ~"(min-width: @{hdReady-device-res})";
+@query-min-largeDevice: ~"(min-width: @{large-device-res})";
+@query-min-mediumDevice: ~"(min-width: @{medium-device-res})";
+@query-min-smallDevice: ~"(min-width: @{small-device-res})";
+@query-min-extraSmallDevice: ~"(min-width: @{extraSmall-device-res})";
+@query-min-oldDevice: ~"(min-width: @{old-device-res})";
+
+// Global CSS variables for simpler responsivity
+:root {
+
+}

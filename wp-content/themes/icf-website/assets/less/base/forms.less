@@ -1,0 +1,57 @@
+input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+    .formInput();
+}
+
+.styled__select {
+    .formSelect();
+}
+
+textarea {
+    .formTextarea();
+}
+
+.styled__checkbox {
+    .formCheckbox();
+}
+
+span.wpcf7-not-valid-tip {
+    position: relative;
+    font-size: 12px;
+    margin: 5px 0 0;
+}
+
+div.wpcf7-response-output,
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+    margin: 25px 0 15px;
+    padding: 15px 20px;
+    border: 2px solid @primary-color;
+    font-size: 14px;
+}
+
+.file__upload {
+    margin-bottom: 20px;
+
+    &__title {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    input[type="file"] {
+        width: 100%;
+
+        &::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+
+        &::before {
+            content: 'Upload';
+            font-size: 16px;
+            text-transform: uppercase;
+            color: @primary-color;
+            font-weight: 700;
+            -webkit-user-select: none;
+            cursor: pointer;
+        }
+    }
+}

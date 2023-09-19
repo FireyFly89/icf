@@ -1,0 +1,35 @@
+# Ignore everything
+/*
+
+# Un-ignore utility stuff
+!.editorconfig
+!composer.json
+!composer.lock
+!package.json
+!package-lock.json
+!bin/
+!assets/
+!.gitignore
+!.env-example
+
+# Including wordpress stuff
+!wp-content
+wp-content/*
+!wp-content/plugins
+wp-content/plugins/*
+!wp-content/themes
+wp-content/themes/*
+!wp-content/uploads/
+!wp-content/themes/eve-icf/
+!wp-content/themes/icf-website/
+wp-content/themes/eve-icf/style.css
+
+# Un-ignoring must have plugins
+!wp-content/plugins/advanced-custom-fields
+!wp-content/plugins/contact-form-7
+!wp-content/plugins/regenerate-thumbnails
+
+# Un-ignore custom stuff
+!demo_database_dump.sql
+
+# Ignore custom stuff

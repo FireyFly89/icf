@@ -1,0 +1,79 @@
+.featuredImage {
+    position: relative;
+    height: @list-img-height;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-position: top center;
+        object-fit: cover;
+        transition: transform @transition-slow-ease;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+}
+
+.jobDetailText {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: @primary-color;
+}
+
+.jobDetailIcon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.pageHeader {
+    @media @query-min-mediumDevice {
+        max-width: 70%;
+    }
+
+    h2 {
+        &:extend(.heading-2);
+    }
+
+    p {
+        margin-bottom: 25px;
+    }
+}
+
+.pageContent {
+    *:last-child {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        &:extend(.heading-2);
+    }
+
+    p, ul, ol {
+        @media @query-min-mediumDevice {
+            max-width: 70%;
+        }
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    figure {
+        position: relative;
+        margin: 55px 0;
+        height: 470px;
+        overflow: hidden;
+
+        img {
+            .coverImg();
+        }
+    }
+}
